@@ -1,0 +1,35 @@
+.bg-glass {
+ background-color: rgba(107, 114, 128, 0.2); /* bg-gray-500 + bg-opacity-20 */
+  background-clip: padding-box; /* bg-clip-padding */
+  backdrop-filter: blur(20px) saturate(200%) contrast(100%); /* backdrop-filter, backdrop-blur-xl, backdrop-saturate-200, backdrop-contrast-100 */
+}
+ 
+.bg-header{
+background-color: #070f2b;
+background-image: radial-gradient(at 95% 55%, #070f2b 0%, transparent 60%), radial-gradient(at 58% 52%, #1b1a55 0%, transparent 50%), radial-gradient(at 82% 82%, #535c91 0%, transparent 40%), radial-gradient(at 7% 62%, #9290c3 0%, transparent 30%);
+}
+.dots-pattern {
+  background-image: radial-gradient(gray 5%, transparent 5%); /* Ukuran titik */
+  background-size:30px 30px; /* Jarak pola titik */
+ 
+}
+ @keyframes snow-fall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  color: white;
+  font-size: 10px;
+  user-select: none;
+  animation: snow-fall linear infinite;
+}
+

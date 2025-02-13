@@ -2,7 +2,7 @@
 
 Todo App adalah aplikasi pengelola tugas yang **sederhana namun powerful**. Dengan antarmuka pengguna yang **bersih** dan **intuitif**, aplikasi ini memungkinkan pengguna untuk membuat, mengedit, dan menghapus tugas sehari-hari dengan mudah. Aplikasi ini menggunakan teknologi terbaru untuk memastikan pengalaman pengguna yang lancar dan responsif.
 
-###Screenshot 📸
+### Screenshot 📸
 ![Todo App Screenshot](./assets/img/demoApp.jpg)
 
 ## Fitur 🎯

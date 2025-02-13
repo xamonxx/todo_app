@@ -52,7 +52,7 @@ Pastikan Anda memiliki **PHP** dan **MySQL** yang sudah terinstall di komputer A
 
 4. **Jalankan aplikasi frontend**
     ```bash
-    npm start
+    npm run dev
 
 Aplikasi akan berjalan di http://localhost:3000.
 

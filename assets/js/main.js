@@ -174,6 +174,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Event listener untuk semua input
   function addInputListener(input, counter, maxLength) {
+    if (!input) return; // Pastikan elemen ada sebelum menambahkan event listener
     input.addEventListener("input", function () {
       updateCounter(input, counter, maxLength);
     });
@@ -182,9 +183,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Terapkan ke semua input
   addInputListener(judulTodo, judulCounter, 50);
-  addInputListener(deskripsiTodo, deskripsiCounter, 255);
+  addInputListener(deskripsiTodo, deskripsiCounter, 999);
   addInputListener(updateJudul, updateJudulCounter, 50);
-  addInputListener(updateDeskripsi, updateDeskripsiCounter, 255);
+  addInputListener(updateDeskripsi, updateDeskripsiCounter, 999);
 });
 
   document.addEventListener("DOMContentLoaded", function () {

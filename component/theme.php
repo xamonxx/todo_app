@@ -1,4 +1,5 @@
-<ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl text-base bg-glass max-h-60 overflow-auto">
+<ul tabindex="0" class="dropdown-content bg-base-300 rounded-box z-[1] w-52 p-2 shadow-2xl text-base bg-glass max-h-60 overflow-auto scrollbar-daisy"
+>
   <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start text-primary" value="light" id="theme-light" aria-label="Light"/></li>
   <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start text-primary" value="dark" id="theme-dark" aria-label="Dark"/></li>
   <li><input type="radio" name="theme-dropdown" class="theme-controller btn btn-sm btn-block btn-ghost justify-start text-primary" value="cupcake" id="theme-cupcake" aria-label="Cupcake"/></li>

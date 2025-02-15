@@ -10,7 +10,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="theme-color" content="#4c1d95" />
   <!-- tailwindcss & daisyui -->
-
   <link href="../assets/css/output.css" rel="stylesheet">
   <link href="../assets/css/custom.css" rel="stylesheet">
   <link rel="icon" href="../assets/img/logo.png" type="png">
@@ -18,12 +17,30 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <title>Todo App</title>
 </head>
-<style>
+<style type="text/tailwindCss">
+
+
   .custom-del {
     text-decoration-color: black !important;
   text-decoration-thickness: 5px !important;
-}
+  
+ @layer utilities {
+  .scrollbar-daisy::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
   }
+
+  .scrollbar-daisy::-webkit-scrollbar-thumb {
+    background-color: hsl(var(--b3)); /* Mengikuti warna base DaisyUI */
+    border-radius: 10px;
+  }
+
+  .scrollbar-daisy::-webkit-scrollbar-track {
+    background: hsl(var(--b2)); /* Warna track mengikuti theme DaisyUI */
+    border-radius: 10px;
+  }
+  }
+  
 </style>
 <body class="dots-pattern pb-[700px] scroll-smooth">
   <!-- start navbar -->
@@ -33,7 +50,7 @@
   <nav class="navbar text-neutral-content px-4">
     <div class="flex-1 justify-between ">
       <div class="dropdown">
-        <div tabindex="0" role="button" class="btn m-1 text-primary bg-glass" id="theme-selector">
+        <div tabindex="0" role="button" class="btn m-1 text-primary bg-glass ring-1 ring-primary" id="theme-selector">
           Theme
           <svg width="12px" height="12px" class="inline-block h-2 w-2 fill-current opacity-60"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2048 2048">
@@ -82,8 +99,8 @@
     <?php while ($todo = mysqli_fetch_assoc($data_todo)): ?>
       <!-- Task 1 -->
       <div class="todo card shadow-xl bg-glass hover:ring-1 ring-primary hover:scale-95 scale-90  hover:shadow-[0px_20px_207px_10px_rgba(165,_39,_255,_0.48)] transition-all animate__animated animate__fadeIn animate__delay-1s <?= $todo['status'] === 'completed' ? '' : ''; ?>">
-       <div class="<?= $todo['status'] === 'completed' ? ' text-center font-semibold bg-green-600 w-full text-white py-2 absolute top-20 opacity-40' : 'hidden'; ?>" >completed</div>
-       <div class="<?= $todo['status'] === 'pending' ? '' : ''; ?>" ></div>
+       <div class="flex justify-center">
+       <div class="<?= $todo['status'] === 'completed' ? ' text-center font-semibold bg-green-600 w-52 text-white py-2 rounde rounded-bl-lg rounded-br-lg opacity-40' : 'hidden'; ?>" >completed</div></div>
         <div class="card-body">
           <!-- Tambahkan ikon pin jika tugas dipin -->
     <?php if ($todo['pinned']): ?>

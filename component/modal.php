@@ -17,7 +17,7 @@
             <label class="label">
               <span class="text-xl uppercase font-semibold">Detail</span>
             </label>
-            <textarea placeholder="Masukan Deskirpsi" class="input input-bordered bg-glass  pt-2"
+            <textarea placeholder="Masukan Deskirpsi" class="input input-bordered bg-glass h-10 pt-2"
               id="deskripsi_todo" name="deskripsi_todo" required></textarea>
           </div>
           <div class="form-control mt-6">
